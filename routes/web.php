@@ -21,3 +21,7 @@ Route::prefix('/app')->group(function () {
         return 'Produtos';
     })->name('products');
 });
+
+Route::fallback(function () {
+    return redirect()->route('main');
+});
